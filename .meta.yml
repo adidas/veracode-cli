@@ -1,0 +1,9 @@
+category: application
+summary: Automated way to check application status and DevSecops compliance
+links:
+- name: Repository
+  url: https://github.com/adidas/veracode-cli
+keywords:
+- golang
+- veracode
+- cli
