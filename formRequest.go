@@ -132,6 +132,10 @@ func makeRequest(uri string, user string, pass string, formParams map[string]str
 	if strings.Contains(bodyString,"Access denied"){
 		return "", errors.New(FORBIDEN_ACCESS)
 	}
+
+	if strings.Contains(bodyString,"Could not find a build"){
+		return "", errors.New(BUILD_NOT_FOUND)
+	}
 	
 	if strings.Contains(bodyString,"<error>"){
 		//s := strconv.Itoa(resp.StatusCode)+"\n"+bodyString[len(bodyString)-1300 : len(bodyString)-900]
